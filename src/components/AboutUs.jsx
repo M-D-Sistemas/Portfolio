@@ -6,11 +6,14 @@ export default function AboutUs() {
           <span className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-200">Sobre M&D Sistemas</span>
           <h2 className="font-display mt-2 text-2xl font-semibold text-white sm:text-4xl">Ingeniería de software con foco comercial</h2>
           <p className="mt-4 max-w-3xl text-slate-300">
-            En M&D Sistemas nos enfocamos en la ingeniería de software como una herramienta para ordenar procesos, mejorar la eficiencia y construir productos digitales que acompañen el crecimiento del negocio.
+            Somos dos estudiantes de Ingeniería en Sistemas, actualmente cursando cuarto año, y trabajamos con una mirada práctica sobre cómo la tecnología puede resolver problemas reales de negocio.
+          </p>
+          <p className="mt-4 max-w-3xl text-slate-300">
+            En M&D Sistemas nos enfocamos en la ingeniería de software como una herramienta para ordenar procesos, mejorar la eficiencia y construir productos digitales que acompañen el crecimiento del negocio. Priorizamos soluciones claras, escalables y bien pensadas desde la experiencia de usuario hasta la implementación técnica.
           </p>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {['Arquitectura simple', 'Entrega incremental', 'Diseño limpio', 'Acompañamiento cercano'].map((item) => (
+            {['Dos estudiantes en cuarto año', 'Arquitectura simple', 'Entrega incremental', 'Acompañamiento cercano'].map((item) => (
               <div key={item} className="rounded-2xl border border-slate-800 bg-white/5 px-4 py-3 text-sm text-slate-200">
                 {item}
               </div>

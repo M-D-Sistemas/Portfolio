@@ -32,19 +32,6 @@ export default function HeroSection() {
               Hablemos de tu proyecto
             </a>
           </div>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {[
-              ['+12', 'años resolviendo procesos'],
-              ['100%', 'enfoque B2B'],
-              ['1 equipo', 'cerca del negocio'],
-            ].map(([value, label]) => (
-              <div key={label} className="rounded-2xl border border-slate-800 bg-white/5 p-4 backdrop-blur-sm">
-                <div className="font-display text-2xl font-bold text-white">{value}</div>
-                <div className="mt-1 text-sm leading-5 text-slate-400">{label}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="relative">
@@ -56,17 +43,6 @@ export default function HeroSection() {
               alt="Equipo analizando estrategia de software"
               className="h-[320px] w-full object-cover sm:h-[420px]"
             />
-
-            <div className="grid gap-4 border-t border-slate-800 p-5 sm:grid-cols-2">
-              <div className="rounded-2xl bg-slate-950/70 p-4">
-                <p className="text-xs uppercase tracking-[0.24em] text-slate-500">Entrega</p>
-                <p className="mt-2 font-display text-lg font-semibold text-white">Diseño + desarrollo + acompañamiento</p>
-              </div>
-              <div className="rounded-2xl bg-slate-950/70 p-4">
-                <p className="text-xs uppercase tracking-[0.24em] text-slate-500">Foco</p>
-                <p className="mt-2 font-display text-lg font-semibold text-white">Procesos críticos y crecimiento</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
