@@ -4,7 +4,6 @@ export default function AboutUs() {
       <div className="grid gap-6 rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-2xl shadow-black/20 md:grid-cols-[1.15fr_0.85fr] md:p-8">
         <div>
           <span className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-200">Sobre M&D Sistemas</span>
-          <h2 className="font-display mt-2 text-2xl font-semibold text-white sm:text-4xl">Ingeniería de software con foco comercial</h2>
           <p className="mt-4 max-w-3xl text-slate-300">
             Somos dos estudiantes de Ingeniería en Sistemas, actualmente cursando cuarto año, y trabajamos con una mirada práctica sobre cómo la tecnología puede resolver problemas reales de negocio.
           </p>
@@ -14,18 +13,18 @@ export default function AboutUs() {
 
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             {['Dos estudiantes en cuarto año', 'Arquitectura simple', 'Entrega incremental', 'Acompañamiento cercano'].map((item) => (
-              <div key={item} className="rounded-2xl border border-slate-800 bg-white/5 px-4 py-3 text-sm text-slate-200">
+              <div key={item} className="rounded-2xl border border-slate-800 bg-white/5 px-4 py-3 text-sm text-slate-200 transition hover:border-blue-500/30 hover:bg-white/10">
                 {item}
               </div>
             ))}
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-[1.75rem] border border-slate-800 bg-slate-950/70">
+        <div className="overflow-hidden rounded-[1.75rem] border border-slate-800 bg-slate-950/70 shadow-lg shadow-black/20">
           <img
-            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
-            alt="Equipo trabajando en estrategia digital"
-            className="h-full min-h-[260px] w-full object-cover"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+            alt="Equipo de desarrollo trabajando en una oficina moderna"
+            className="h-full min-h-[260px] w-full object-cover object-center"
           />
         </div>
       </div>

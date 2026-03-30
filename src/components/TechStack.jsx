@@ -50,9 +50,10 @@ export default function TechStack() {
     <section id="tech" className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-2xl shadow-black/20 backdrop-blur md:p-8">
         <div className="max-w-2xl">
-          <h2 className="text-2xl font-semibold text-white sm:text-3xl">Tecnologías que dominamos</h2>
+          <span className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-200">Tecnologías</span>
+          <h2 className="font-display mt-2 text-2xl font-semibold text-white sm:text-4xl">Stack que usamos para construir software real</h2>
           <p className="mt-3 text-slate-300">
-            Seleccionamos el stack según la necesidad del negocio, buscando velocidad, mantenibilidad y escalabilidad.
+            Elegimos herramientas maduras para entregar velocidad, mantenibilidad y una base técnica sólida desde el inicio.
           </p>
         </div>
 

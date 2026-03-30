@@ -11,10 +11,10 @@ export default function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/85 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#top" className="flex items-center gap-3 text-white">
-          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 font-display text-sm font-bold text-slate-950 shadow-glow">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-slate-950/70 backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#top" className="flex items-center gap-3 text-white transition hover:opacity-95">
+          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-blue-500 via-cyan-400 to-sky-300 font-display text-sm font-bold text-slate-950 shadow-glow">
             M&D
           </span>
           <span className="flex flex-col leading-tight">
@@ -23,7 +23,7 @@ export default function SiteHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-7 text-sm font-medium text-slate-300 md:flex">
+        <nav className="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex">
           {navigation.map((item) => (
             <a key={item.label} className="transition hover:text-white" href={item.href}>
               {item.label}
@@ -34,7 +34,7 @@ export default function SiteHeader() {
         <button
           type="button"
           onClick={() => setIsOpen((value) => !value)}
-          className="inline-flex items-center justify-center rounded-full border border-slate-800 bg-white/5 p-3 text-slate-200 transition hover:border-slate-700 hover:bg-white/10 md:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-slate-800 bg-white/5 p-3 text-slate-200 transition hover:border-slate-700 hover:bg-white/10 lg:hidden"
           aria-expanded={isOpen}
           aria-label="Abrir navegación"
         >
@@ -47,7 +47,7 @@ export default function SiteHeader() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-white/5 bg-slate-950/95 px-4 py-4 md:hidden">
+        <div className="border-t border-white/5 bg-slate-950/95 px-4 py-4 lg:hidden">
           <nav className="mx-auto flex w-full max-w-7xl flex-col gap-3 text-sm font-medium text-slate-300">
             {navigation.map((item) => (
               <a

@@ -22,9 +22,12 @@ export default function ProjectsGallery() {
                 src={project.image}
                 alt={project.title}
                 loading="lazy"
-                className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
+                className="h-52 w-full object-cover object-center transition duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+              <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-100 backdrop-blur">
+                Caso real
+              </div>
             </div>
 
             <div className="flex flex-1 flex-col p-6">
