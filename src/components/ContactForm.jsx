@@ -8,16 +8,62 @@ const initialState = {
 
 export default function ContactForm() {
   const [formData, setFormData] = useState(initialState);
+  const [status, setStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((current) => ({ ...current, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setFormData(initialState);
+
+    if (isSubmitting) {
+      return;
+    }
+
+    const form = event.currentTarget;
+    const formDataPayload = new FormData(form);
+    formDataPayload.append('access_key', 'ee3d4a4b-30a2-416b-9fd1-b4f72229a0a2');
+
+    if (formDataPayload.get('botcheck')) {
+      setStatus('Bot detectado');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setStatus('Enviando...');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataPayload,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('¡Mensaje enviado con éxito! Nos contactaremos pronto.');
+        setFormData(initialState);
+        form.reset();
+      } else {
+        setStatus('Hubo un error al enviar el mensaje. Intenta de nuevo.');
+      }
+    } catch {
+      setStatus('Error de conexión.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  const statusClassName = status.includes('éxito')
+    ? 'text-emerald-300'
+    : status.includes('Enviando')
+      ? 'text-slate-400'
+      : status
+        ? 'text-red-300'
+        : 'text-slate-400';
 
   return (
     <section id="contact" className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -48,6 +94,7 @@ export default function ContactForm() {
               id="name"
               name="name"
               type="text"
+              required
               value={formData.name}
               onChange={handleChange}
               placeholder="Tu nombre"
@@ -63,6 +110,7 @@ export default function ContactForm() {
               id="email"
               name="email"
               type="email"
+              required
               value={formData.email}
               onChange={handleChange}
               placeholder="tu@empresa.com"
@@ -78,6 +126,7 @@ export default function ContactForm() {
               id="message"
               name="message"
               rows="5"
+              required
               value={formData.message}
               onChange={handleChange}
               placeholder="Contanos qué necesitás construir..."
@@ -85,12 +134,19 @@ export default function ContactForm() {
             />
           </div>
 
+          <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
           <button
             type="submit"
-            className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white transition hover:from-blue-500 hover:to-cyan-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+            disabled={isSubmitting}
+            className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white transition hover:from-blue-500 hover:to-cyan-400 disabled:cursor-not-allowed disabled:opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-950"
           >
-            Enviar consulta
+            {isSubmitting ? 'Enviando...' : 'Enviar consulta'}
           </button>
+
+          <p className={`min-h-5 text-sm font-medium ${statusClassName}`} aria-live="polite">
+            {status}
+          </p>
         </form>
       </div>
     </section>
