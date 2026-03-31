@@ -6,16 +6,16 @@ export default function Footer() {
     <footer className="relative mt-4 border-t border-white/5 bg-[#050816] text-slate-100 backdrop-blur-xl">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/50 to-transparent" />
 
-      <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="rounded-[1.75rem] border border-white/5 bg-white/[0.03] px-5 py-6 shadow-2xl shadow-black/25 sm:px-6 sm:py-7">
-          <div className="grid gap-8 md:grid-cols-3 md:items-start md:gap-6">
-            <div className="space-y-4">
+      <div className="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+        <div className="rounded-[1.75rem] border border-white/5 bg-white/[0.03] px-5 py-4 shadow-2xl shadow-black/25 sm:px-6 sm:py-5">
+          <div className="grid gap-5 md:grid-cols-3 md:items-start md:gap-4">
+            <div className="space-y-3">
               <BrandLogo variant="footer" />
             </div>
 
-            <div className="space-y-4 md:justify-self-center">
+            <div className="space-y-3 md:justify-self-center">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200">Enlaces</p>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2.5">
                 <a
                   href="https://www.instagram.com/masdalsoft/"
                   target="_blank"
@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="space-y-4 md:justify-self-end md:text-right">
+            <div className="space-y-3 md:justify-self-end md:text-right">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200">Contacto</p>
               <a
                 href="mailto:mdsistemas.dev@gmail.com"
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-6 flex flex-col gap-3 border-t border-white/5 pt-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:text-sm">
+          <div className="mt-4 flex flex-col gap-2 border-t border-white/5 pt-3 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:text-sm">
             <p>© {new Date().getFullYear()} MASDAL SOFT. Todos los derechos reservados.</p>
             <a href="#top" className="transition hover:text-slate-300">
               Volver arriba
