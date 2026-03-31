@@ -14,8 +14,8 @@ export default function AboutUs() {
 
         <div className="overflow-hidden rounded-[1.75rem] border border-slate-800 bg-slate-950/70 shadow-lg shadow-black/20">
           <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
-            alt="Equipo de desarrollo trabajando en una oficina moderna"
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+            alt="Equipo de desarrollo revisando ideas alrededor de una mesa de trabajo"
             className="h-full min-h-[260px] w-full object-cover object-center"
           />
         </div>

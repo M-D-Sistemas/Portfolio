@@ -53,9 +53,9 @@ export default function BrandLogo({ variant = 'compact', className = '' }) {
           </div>
         </div>
       ) : isFooter ? (
-        <div className="flex flex-col items-center gap-2.5 text-center md:items-start md:text-left">
-          <div className="grid h-18 w-18 place-items-center rounded-[1.35rem] border border-white/10 bg-slate-950/80 shadow-glow ring-1 ring-white/5 sm:h-20 sm:w-20">
-            <svg viewBox="0 0 360 360" className="h-12 w-12 sm:h-14 sm:w-14" aria-hidden="true">
+        <div className="flex flex-col items-center gap-2 text-center md:items-start md:text-left">
+          <div className="grid h-16 w-16 place-items-center rounded-[1.25rem] border border-white/10 bg-slate-950/80 shadow-glow ring-1 ring-white/5 sm:h-18 sm:w-18">
+            <svg viewBox="0 0 360 360" className="h-11 w-11 sm:h-12 sm:w-12" aria-hidden="true">
               <defs>
                 <linearGradient id={`${gradientId}-footer`} x1="48" y1="48" x2="312" y2="312" gradientUnits="userSpaceOnUse">
                   <stop offset="0%" stopColor="#38bdf8" />
@@ -84,7 +84,7 @@ export default function BrandLogo({ variant = 'compact', className = '' }) {
           </div>
 
           <div className="space-y-0.5">
-            <div className="font-display text-lg font-bold tracking-[0.22em] text-white sm:text-xl">MASDAL SOFT</div>
+            <div className="font-display text-base font-bold tracking-[0.22em] text-white sm:text-lg">MASDAL SOFT</div>
           </div>
         </div>
       ) : (
