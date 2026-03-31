@@ -1,5 +1,3 @@
-import BrandLogo from './BrandLogo';
-
 export default function HeroSection() {
   return (
     <section className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
@@ -47,17 +45,14 @@ export default function HeroSection() {
         </div>
 
         <div className="relative">
-          <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-900/70 shadow-2xl shadow-black/30 ring-1 ring-white/5">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.16),transparent_34%),linear-gradient(180deg,rgba(15,23,42,0.95),rgba(2,6,23,0.98))]" />
-            <div className="relative flex min-h-[320px] flex-col justify-between p-6 sm:min-h-[420px] sm:p-8">
-              <div className="flex items-center justify-end gap-2 text-[11px] uppercase tracking-[0.24em] text-slate-400">
-                <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.8)]" />
-                Identidad visual
-              </div>
-
-              <BrandLogo variant="full" />
-
-              <div className="flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-900/70 shadow-2xl shadow-black/30 ring-1 ring-white/5">
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+              alt="Equipo de producto y desarrollo trabajando en una oficina moderna"
+              className="h-[320px] w-full object-cover object-center sm:h-[420px]"
+            />
+            <div className="border-t border-slate-800 bg-slate-950/80 p-5">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-[0.24em] text-slate-500">Entregamos</p>
                   <p className="mt-2 text-lg font-semibold text-white">Software claro, usable y escalable</p>

@@ -3,7 +3,7 @@ import BrandLogo from './BrandLogo';
 
 const navigation = [
   { label: 'Servicios', href: '#tech' },
-  { label: 'Casos', href: '#projects' },
+  { label: 'Proyectos', href: '#projects' },
   { label: 'Nosotros', href: '#about' },
   { label: 'Contacto', href: '#contact' },
 ];

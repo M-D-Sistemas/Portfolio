@@ -8,16 +8,8 @@ export default function AboutUs() {
             Somos dos estudiantes de Ingeniería en Sistemas, actualmente cursando cuarto año, y trabajamos con una mirada práctica sobre cómo la tecnología puede resolver problemas reales de negocio.
           </p>
           <p className="mt-4 max-w-3xl text-slate-300">
-            En MASDAL SOFT nos enfocamos en la ingeniería de software como una herramienta para ordenar procesos, mejorar la eficiencia y construir productos digitales que acompañen el crecimiento del negocio. Priorizamos soluciones claras, escalables y bien pensadas desde la experiencia de usuario hasta la implementación técnica.
+            En MASDAL SOFT nos enfocamos en el desarrollo de soluciones tecnológicas como una herramienta para ordenar procesos, mejorar la eficiencia y construir productos digitales que acompañen el crecimiento del negocio. Priorizamos soluciones claras, escalables y bien pensadas desde la experiencia de usuario hasta la implementación técnica.
           </p>
-
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {['Dos estudiantes en cuarto año', 'Arquitectura simple', 'Entrega incremental', 'Acompañamiento cercano'].map((item) => (
-              <div key={item} className="rounded-2xl border border-slate-800 bg-white/5 px-4 py-3 text-sm text-slate-200 transition hover:border-blue-500/30 hover:bg-white/10">
-                {item}
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="overflow-hidden rounded-[1.75rem] border border-slate-800 bg-slate-950/70 shadow-lg shadow-black/20">

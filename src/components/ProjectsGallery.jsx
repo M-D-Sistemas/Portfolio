@@ -3,10 +3,12 @@ import { projects } from '../data/projects';
 export default function ProjectsGallery() {
   return (
     <section id="projects" className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="max-w-2xl">
+      <div className="w-full max-w-none">
         <span className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-200">Proyectos</span>
-        <h2 className="font-display mt-2 text-2xl font-semibold text-white sm:text-4xl">Casos de éxito destacados</h2>
-        <p className="mt-3 text-slate-300">
+        <h2 className="font-display text-balance mt-2 max-w-5xl text-2xl font-semibold leading-tight text-white sm:text-4xl">
+          Casos de éxito destacados
+        </h2>
+        <p className="mt-3 max-w-5xl text-balance text-slate-300 sm:text-lg">
           Proyectos pensados para resolver procesos reales, mejorar márgenes y acelerar decisiones.
         </p>
       </div>

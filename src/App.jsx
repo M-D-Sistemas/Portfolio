@@ -4,6 +4,7 @@ import TechStack from './components/TechStack';
 import ProjectsGallery from './components/ProjectsGallery';
 import AboutUs from './components/AboutUs';
 import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -21,9 +22,10 @@ export default function App() {
         <ContactForm />
       </main>
 
-      <footer className="relative border-t border-white/5 bg-slate-950/70 py-8 text-center text-sm text-slate-500 backdrop-blur">
-        © {new Date().getFullYear()} MASDAL SOFT. Software a medida para empresas que necesitan escalar.
-      </footer>
+
+
+
+      <Footer />
     </div>
   );
 }
