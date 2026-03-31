@@ -22,7 +22,7 @@ export default function App() {
       </main>
 
       <footer className="relative border-t border-white/5 bg-slate-950/70 py-8 text-center text-sm text-slate-500 backdrop-blur">
-        © {new Date().getFullYear()} M&D Sistemas. Software a medida para empresas que necesitan escalar.
+        © {new Date().getFullYear()} MASDAL SOFT. Software a medida para empresas que necesitan escalar.
       </footer>
     </div>
   );

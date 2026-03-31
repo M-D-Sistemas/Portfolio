@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import BrandLogo from './BrandLogo';
 
 const navigation = [
   { label: 'Servicios', href: '#tech' },
@@ -14,13 +15,7 @@ export default function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-slate-950/70 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#top" className="flex items-center gap-3 text-white transition hover:opacity-95">
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-blue-500 via-cyan-400 to-sky-300 font-display text-sm font-bold text-slate-950 shadow-glow">
-            M&D
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-display text-lg font-bold tracking-tight">M&D Sistemas</span>
-            <span className="text-xs uppercase tracking-[0.24em] text-slate-400">Software para escalar</span>
-          </span>
+          <BrandLogo />
         </a>
 
         <nav className="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex">
